@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <style>
+     body {
+       background-color: #0F0F0F;
+       background-size: cover;
+       user-select: none;
+       pointer-events: none;
+       max-height: 100%;
+     }
+     .grid {
+      width: 1220px;
+      max-width:90%;
+      margin: 0 auto 0 auto;
+      display: flex;
+      flex-direction: column;
+      height: 90%;
+    }
+    .container {
+      display: flex;
+      height: 2000px;
+      background-color: #444444;
+    }
+    #skew {
+      background-color: pink;
+      transform: skew(-7deg, 7deg);
+      height: 200px;
+      width: 2000px;
+    }
+    #header {
+      height: 95px;
+      top: -5px;
+      left: 0px;
+      background-color: #FFFFFF;
+    }
+    </style>
+  </head>
+  <body>
+    <div id=header>test</div>
+    <div class=grid>
+      <div class=container>
+      </div>
+    </div>
+  </body>
+</html>
