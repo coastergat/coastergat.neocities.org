@@ -1,0 +1,219 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>>Askbox</title>
+  <link rel="icon" type="image/x-icon" href="reach.ico" />
+  <style>
+      body {
+      background: black;
+      background-size: cover;
+      max-height: 100%;
+      color: white;
+      font-family: "Comic Sans MS", "Comic Sans";
+      font-size: 1em;
+      line-height: 23px;
+      overflow:hidden;
+    }
+    .grid {
+      max-width: 1200px;
+      margin: 30px auto 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      height: 90%;
+    }
+    .particlecont {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      z-index:-1;
+      background-color: transparent;
+      pointer-events: none;
+    }
+    img, p, h1, h2, h3, h4, h5, h6 {
+      user-select: none;
+      draggable: false;
+      pointer-events: none;
+    }
+    img {
+      padding: 2px;
+    }
+    p {
+      font-size: 1.1rem;
+    }
+    .heading {
+      display: flex;
+      height: 10px; <!-- change back to 150px for logo -->
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 20px;
+    }
+
+    .heading img {
+      width: 80%;
+    }
+
+    .container {
+      display: flex;
+      height: 800px;
+      background-color: rgba(170, 200, 255, 1);
+      outline: 7px dashed indigo;
+    }
+    .left {
+      height: 700px;
+      width: 12%;
+      background-color: rgba(170, 200, 255, 1);
+    }
+    .right {
+      height: 800px;
+      width:88%;
+      background-color: rgba(170, 200, 255, 1);
+      overflow-y:scroll;
+      overflow-x: hidden;
+      margin-left: 20px;
+    }
+    .rightcontainer {
+      background-color: rgba(170, 200, 255, 0);
+      margin: 30px;
+      justify-content: center;
+    }
+    .rightcontainer p {
+      color:black;
+    }
+    h2 {
+      text-shadow: -0.175rem 0.175rem 0px indigo;
+      color: black;
+      font-size: 2rem;
+      margin-left: 80px;
+    }
+    p {
+      margin-left: 80px;
+    }
+    h1 {
+      text-shadow: -0.3rem 0.3rem 0px indigo;
+      color: black;
+      font-size: 3.5rem;
+    }
+    .samu {
+       position: absolute;
+       float: center;
+        transform: none;
+       width: 100%;
+        height: auto;
+       max-width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      opacity: 1;
+    }
+    .blockade {
+      width:110%;
+      height:100px;
+      background-color: rgba(170, 200, 255, 1);
+      z-index:9;
+      margin-bottom: -190px;
+    }
+    @keyframes pf {
+      0% {
+       top: 100%;
+      }
+      100% {
+       top: -5%;
+     }
+    }
+    @keyframes sr {
+      0% {
+        right: -5%;
+      }
+      100% {
+        right: 105%;
+      }
+    }
+    .particle {
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      background-color: transparent;
+      animation: pf linear infinite;
+      z-index: -1;
+    }
+    .surf {
+      position: absolute;
+      width: 68px; 
+      height: 76px;
+      pointer-events: none;
+      animation: sr 20s linear forwards;
+      z-index: -1;
+      bottom: 0;
+    }
+    </style>
+    </head>
+    <body>
+        <div class="particlecont"></div>
+<div class="grid">
+    <div class="heading">
+    </div>
+    <div class="heading"></div>
+    <div class="container">
+    <div class="left"><center><h1 style="text-orientation: mixed; writing-mode: vertical-rl; transform: rotate(180deg) translateY(-3.4rem) translateX(-0.2rem);">>Askbox</h1></center></div>
+    <div class="right"><div class="rightcontainer">
+   <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSepfTxlAighF2-dOzkqsUZ3dSY3AX3osQluqmKxmiWXL-HpKg/viewform?embedded=true" width="800" height="620" frameborder="0" marginheight="0" marginwidth="0" style="transform:translateY(-160px); marginbottom:-200px;">Loading…</iframe>
+   <div class="blockade" style="transform:translateY(-710px);"></div>
+   <div class="blockade" style="transform:translateY(-170px);"></div>
+   <p style="translateY(-400px);">Questions and Answers will be put down here once answered! Unforunately I cannot ping you when I answer your question, so just check back whenever to see if there's an answer.</p>
+    </div>
+    </div>
+    </div>
+    <div class="heading"><div id="samu"><img src="images/samurottlarge.gif" style="transform: translateY(-190px) translateX(-180px); width:40%;"></div>
+    </div>
+    </div>
+        <script>
+    const container = document.querySelector('.particlecont');
+    const numParticles = 130;
+
+    const particleImages = [
+    "images/b1.png",
+    "images/b2.png",
+    "images/b3.png",
+   ];
+   
+   const surfImages = [
+     "images/hildasurf4x.png",
+     "images/hilbertsurf4x.png",
+     "images/rosasurf4x.png",
+     "images/natesurf4x.png"
+   ];
+   
+    for (let i = 0; i < numParticles; i++) {
+      const particle = document.createElement('img');
+      particle.classList.add('particle');
+      particle.src = particleImages[Math.floor(Math.random() * particleImages.length)];
+      particle.style.left = Math.random() * 100 + '%';
+      particle.style.animationDuration = Math.random() * 9 + 5 + 's';  
+      particle.style.animationDelay = Math.random() * 10;
+    container.appendChild(particle);
+    }
+    
+    function spawnSurf() {
+      const surfpart = document.createElement('img');
+      surfpart.classList.add('surf');
+      surfpart.src = surfImages[Math.floor(Math.random() * surfImages.length)];
+    
+      surfpart.style.animationDuration = Math.random() * 8 + 5 + 's';
+      surfpart.style.bottom = Math.random() * 90 + '%';
+    
+      container.appendChild(surfpart);
+    
+      surfpart.addEventListener('animationend', () => {
+        surfpart.remove();
+      });
+    }
+
+    spawnSurf();
+    
+    setInterval(spawnSurf, 20000);
+  </script><!-- Got particle code from tutorialpedia.org-->
+  <!--fix delay tbd-->
+  <!--Don't look at my spaghetti code.-->
+    </body>

@@ -1,0 +1,231 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>>Gallery</title>
+  <link rel="icon" type="image/x-icon" href="reach.ico" />
+  <style>
+      body {
+      background: black;
+      background-size: cover;
+      max-height: 100%;
+      color: white;
+      font-family: "Comic Sans MS", "Comic Sans";
+      font-size: 1em;
+      line-height: 23px;
+      overflow:hidden;
+    }
+    .grid {
+      max-width: 1200px;
+      margin: 30px auto 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      height: 90%;
+    }
+    .particlecont {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      z-index:-1;
+      background-color: transparent;
+      pointer-events: none;
+    }
+    img, p, h1, h2, h3, h4, h5, h6 {
+      user-select: none;
+      draggable: false;
+      pointer-events: none;
+    }
+    img {
+      padding: 2px;
+    }
+    p {
+      font-size: 1.1rem;
+    }
+    .heading {
+      display: flex;
+      height: 10px; <!-- change back to 150px for logo -->
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 20px;
+    }
+
+    .heading img {
+      width: 80%;
+    }
+
+    .container {
+      display: flex;
+      height: 800px;
+      background-color: rgba(255, 230, 230, 1);
+      outline: 7px dashed #f5a7b7;
+    }
+    .left {
+      height: 700px;
+      width: 12%;
+      background-color: rgba(255, 230, 230, 1);
+    }
+    .right {
+      height: 800px;
+      width:88%;
+      background-color: rgba(255, 230, 230, 1);
+      overflow-y:scroll;
+      overflow-x: hidden;
+      margin-left: 20px;
+    }
+    .rightcontainer {
+      background-color: rgba(255, 230, 230, 0);
+      margin: 30px;
+      margin-top: 55px;
+    }
+    .rightcontainer p {
+      color:black;
+    }
+    h2 {
+      text-shadow: -0.175rem 0.175rem 0px #9b5f5f;
+      color: black;
+      font-size: 2rem;
+    }
+    h1 {
+      text-shadow: -0.3rem 0.3rem 0px #9b5f5f;
+      color: black;
+      font-size: 3.5rem;
+    }
+    .rosa {
+       position: absolute;
+       float: center;
+        transform: none;
+       width: 100%;
+        height: auto;
+       max-width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      opacity: 1;
+    }
+    @keyframes pf {
+      0% {
+       top: -5%;
+     }
+      100% {
+       top: 100%;
+     }
+    }
+    @keyframes dr {
+      0% {
+        transform: translate(200px, 0);
+      }
+      100% {
+        transform: translate(-400px, -105vh);
+      }
+    }
+    .particle {
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      background-color: transparent;
+      animation: pf linear infinite;
+      z-index: -1;
+    }
+    .drifloon {
+      position: absolute;
+      width: 80px; 
+      height: 68px;
+      pointer-events: none;
+      animation: dr 20s linear forwards;
+      z-index: -1;
+      bottom: 0;
+    }
+    .balcony {
+      position: fixed;
+      bottom: -5px;
+      right: 20px;
+      background-color: transparent;
+      z-index: 100;
+    }
+    </style>
+    </head>
+    <body>    <div class="balcony"></div>
+        <div class="particlecont"></div>
+<div class="grid">
+    <div class="heading"></div>
+    <div class="heading"></div>
+    <div class="container">
+    <div class="left"><center><h1 style="text-orientation: mixed; writing-mode: vertical-rl; transform: rotate(180deg) translateY(-3.4rem) translateX(-0.2rem);">>Gallery</h1></center></div>
+    <div class="right"><div class="rightcontainer">
+    <center><h2>My Art Gallery</h2>
+     <p>This is a quick page with some of my art on it.<br>It's nothing impressive but what the hell, might as well share it.</p>
+    <p>I'll add alternate colors and extra info for each drawing later.</p>
+    <p>Please do not use anything here without permission or credit.</p>
+    <h2>I'm not great at art so you're not missing anything by skipping this page lol.</h2><br>
+    <h2>RBY Sprites</h2>
+    <img src="images/Probosicle2x.png" title="This is a sprite I made for RBY CAP, it's Probosicle! (In the style of Yellow)."><img src="images/Roaduo2xn.png" title="Another RBY CAP sprite, Roaduo! It's a split evo of Doduo done in Yellow's sprite style."><img src="images/RBLitwick2x.png" title="Litwick in RB's sprite style."><img src="images/RBEmolga2x.png" title="Emolga in RB's sprite style."><img src="images/RBWhimsicott2x.png" title="Whimsicott in RB's sprite style. Yes, this is way too large, but it lends itself to RB's jankiness I suppose lol. Will downsize eventually."><br>
+    <img src="images/Caterpie2x.png" title=""><img src="images/Metapod2x.png" title=""><img src="images/Butterfree2x.png" title=""><img src="images/weedle2x.png" title="">
+    <br><br><br><h2>BW Sprites</h2>
+    <img src="images/Octillery2x.gif" title="Beta Octillery in Gen 5! It's an edit of Octillery's sprite that works in-game."><br><br><br>
+    <h2>Misc Large Pokémon Art</h2>
+    <img src="images/CalypsoTransparent.webp" title="A drawing of my Omega Ruby Armaldo, Calypso." width="250"> <img src="images/WrenBirthdayBingy2.png" title="My friend Wren's Gliscor Bingy! I drew this for her birthday on Strawpage. (Asked for permission before putting on here :) )" width="300"><img src="images/GPGPbot.webp" width="300"><img src="images/honeybun.webp" width="300"><br><br><br>
+    <h2>Misc Pokémon (Animated)</h2>
+       <img src="images/PorkChop.gif" title="Zorua named Pork Chop, this animation is for a shimeji I'm working on."><img src="images/Midds&co.gif" title="GIF I made of my Beheeyem and his adopted son."><img src="images/SnivyTransform.gif" title="Another shimeji animation for Pork Chop, she's turning into a Snivy."><br><br><br>
+       <h2>Neopets</h2>
+    <img src="images/Crunchsit.png" title="Drawing of my Snot Aisha, BabyCrunchwrap. I made it for his pet lookup." width="256"><img src="images/Crunchshock.png" title="Some more art of my Snot Aisha, BabyCrunchwrap, also made for his pet lookup." width="256"><img src="images/Meloucansit.png" title="My Darigan Bori, Meloucan. I drew this for her pet lookup." width="256"><img src="images/tooth_armor.png" title="Wren's Fire Moehog, tooth_armor." width="256"><br><br><br>
+    <h2>Colloyd</h2>
+    <p>This is my weird character. Don't ask.</p>
+    <img src="images/Curdlebro.webp" width=45%><img src="images/ChalkColloyd.webp" width=45%><img src="images/ColloydLinedUp.webp"width=45%>
+    <br><br><br>
+    <h2>The Ragu Monster</h2>
+    <p>TRM FOREVER!</p>
+    <img src="images/LylaMidnini.webp"><img src="images/Creambert.webp" width=50%>
+    </div>
+    </div>
+    </div>
+    <div class="heading"><div id="rosa"><img src="images/RosaDrawnBy@coastergat.webp" style="transform: translateY(-240px) translateX(-110px); width:102%;"></div>
+    </div>
+    </div>
+        <script>
+    const container = document.querySelector('.particlecont');
+    const numParticles = 100;
+
+    const particleImages = [
+    "images/sp1.png",
+    "images/sp2.png",
+    "images/sp3.png",
+    "images/sp4.png"
+   ];
+   
+   const drifImage = [
+     "images/Drif4x.png",
+   ];
+   
+    for (let i = 0; i < numParticles; i++) {
+      const particle = document.createElement('img');
+      particle.classList.add('particle');
+      particle.src = particleImages[Math.floor(Math.random() * particleImages.length)];
+      particle.style.left = Math.random() * 100 + '%';
+      particle.style.animationDuration = Math.random() * 7 + 5 + 's';  
+      particle.style.animationDelay = Math.random() * 10;
+    container.appendChild(particle);
+    }
+    
+    function spawnDrif() {
+      const drifpart = document.createElement('img');
+      drifpart.classList.add('drifloon');
+      drifpart.src = drifImage[Math.floor(Math.random() * drifImage.length)];
+    
+      drifpart.style.animationDuration = Math.random() * 2 + 5 + 's';
+      drifpart.style.left = Math.random() * 90 + '%';
+    
+      container.appendChild(drifpart);
+    
+      drifpart.addEventListener('animationend', () => {
+        drifpart.remove();
+      });
+    }
+
+    spawnDrif();
+    
+    setInterval(spawnDrif, 20000);
+  </script><!-- Got particle code from tutorialpedia.org-->
+  <!--fix delay tbd-->
+  <!--Don't look at my spaghetti code.-->
+    </body>

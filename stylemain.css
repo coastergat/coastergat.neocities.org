@@ -1,0 +1,459 @@
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+ img, p, h1, h2, h3, h4, h5, h6 {
+      user-select: none;
+      draggable: false;
+    }
+    h4 {
+      text-align: right;
+      line-height: 16px;
+    }
+    #mp3container {
+      position: fixed;
+      bottom: 30px;
+      left: 70px;
+      overflow: hidden;
+      height: 80px;
+      width: 403px;
+      padding: 5px;
+      transform: skew(-7deg, -3deg);
+      background-color: rgba(0, 0, 0, 1);
+      border: 5px solid black;
+      display: flex;
+      justify-content: right;
+      align-items: center;
+      margin: auto;
+    }
+    
+    #trail1 {
+      position: fixed;
+      bottom: 122px;
+      left: 240px;
+      overflow: hidden;
+      height: 25px;
+      width: 240px;
+      padding: 0px;
+      transform: skew(-7deg, -3deg);
+      background-color: rgba(0, 0, 0, 1);
+      border-right: 10px solid black;
+      border-bottom: 5px solid black;
+      align-items: center;
+      justify-content: right;
+      display: flex;
+    }
+    
+    #trail2 {
+      position: fixed;
+      bottom: 158px;
+      left: 384px;
+      overflow: visible;
+      height: 25px;
+      width: 100px;
+      transform: skew(-7deg, -3deg);
+      background-color: rgba(0, 0, 0, 1);
+      justify-content: left;
+      align-items: center;
+      border-bottom: 10px solid black;
+    }
+    
+    body {
+      background: url(images/castelia.png) no-repeat fixed center;
+      background-size: cover;
+      min-height: 100%;
+      color: white;
+      font-family: "Comic Sans MS", "Comic Sans";
+      font-size: 1em;
+      line-height: 23px;
+      overflow-x:hidden;
+      position:relative;
+    }
+    
+    footer {
+      height: 100px;
+    }
+
+    .grid {
+      width: 100%;
+      max-width: 900px;
+      margin: 30px auto 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .heading,
+    .topbox,
+    .foota {
+      width: 100%;
+      padding: 20px;
+    }
+
+    .heading {
+      display: flex;
+      height: 150px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .heading img {
+      width: 80%;
+    }
+
+    .topbox {
+      height: 70px;
+      background-color: rgba(0, 0, 0, 1);
+    }
+
+    .foota {
+      height: 260px;
+      background-color: rgba(0, 0, 0, 1);
+    }
+
+    .row {
+      display: flex;
+      width: 100%;
+    }
+
+    .largeleft {
+      background-color: rgba(0, 0, 0, 1);
+      width: 580px;
+      height: 420px;
+      padding: 20px;
+      margin-right: 10px;
+    }
+
+    .right-column {
+      display: flex;
+      flex-direction: column;
+      width: 310px;
+      gap: 10px;
+    }
+
+    .smallrightup,
+    .smallrightdown {
+      background-color: rgba(0, 0, 0, 1);
+      padding: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .smallrightup {
+      height: 105px;
+      display: flex;
+      align-items: center;   
+      justify-content: center;
+      position: relative; 
+      overflow: visible;
+    }
+
+    .dsbugs {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateY(-500px) translateX(10px);
+      z-index: 10;
+      opacity: 1;
+    }
+    
+    .lay3l {
+      background-color: rgba(0, 0, 0, 1);
+      width: 680px;
+      height: 200px;
+      padding: 20px;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .lay3r {
+      background-color: rgba(0, 0, 0, 1);
+      width: 200px;
+      height: 200px;
+      margin-right: 10px;
+    }
+    
+    .lay3l h2 {
+      text-shadow: 2px 2px 0px red;
+    }
+
+    @media (max-width: 600px) {
+     .smallrightup {
+        width: 100%;
+       height: 100px;
+      }
+
+      .dsbugs {
+       position: relative;
+        transform: none;
+       width: 100%;
+        height: auto;
+       max-width: 100%;
+     }
+    }
+
+    .smallrightdown {
+      height: 305px;
+    }
+
+    .smallleft {
+      display: flex;
+      flex-direction: row;
+      width: 250px;
+      height: 800px;
+      background-color: rgba(0, 0, 0, 1);
+      padding: 0;
+      margin-right: 10px;
+      overflow: hidden;
+    }
+
+    .sll {
+      width: 50px;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .slr {
+      width: 200px;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 1);
+      padding: 10px;
+    }
+    
+    .slr p {
+      font-size: 1.3em;
+      line-height: 45px;
+    }
+    
+    .slr img {
+      padding: 1px;
+    }
+    
+    .slr h2 {
+      text-shadow: 2px 2px 0px red;
+    }
+    
+    .slr a {
+      color: white;
+      text-decoration: none;
+    }
+    
+    .slr a:hover {
+      text-shadow: 4px 4px 0px red;
+      font-weight: bold;
+      font-size: 1.5em;
+    }
+    
+    .box {
+     position: relative;
+     width: 88px;
+     height: 31px;
+     display: inline-block;
+    }
+    
+    .box img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    
+    .box textarea {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 88px;
+      height: 31px;
+      resize: none;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      font-size: 8px;
+    }
+
+    .box:hover textarea {
+      opacity: 1;
+    }
+
+    .largeright {
+      background-color: rgba(0, 0, 0, 1);
+      width: 640px;
+      height: 800px;
+      padding: 20px;
+    }
+
+    .marquee800 {
+      height: 800px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .shittymarqueeimages {
+      display: flex;
+      flex-direction: column;
+      height: 1920px;
+      animation: scrollUp 22.4s linear infinite;
+    }
+
+    .shittymarqueeimages img {
+      height: 40px;
+      width: 40px;
+      user-select: none;
+      display: block;
+    }
+
+    .ms {
+      animation: wigglybug 4s ease-in-out infinite;
+      animation-direction: normal;
+    }
+
+    .drive {
+      animation: wigglydrive 4s ease-in-out infinite;
+      animation-direction: normal;
+    }
+
+    @keyframes scrollUp {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-960px);
+      }
+    }
+
+    @keyframes wigglybug {
+      0% {
+        transform: translateX(0);
+      }
+      25% {
+        transform: translateX(-5px);
+      }
+      50% {
+        transform: translateX(0);
+      }
+      75% {
+        transform: translateX(5px);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes wigglydrive {
+      0% {
+        transform: translateX(0);
+      }
+      25% {
+        transform: translateX(5px);
+      }
+      50% {
+        transform: translateX(0);
+      }
+      75% {
+        transform: translateX(-5px);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+
+    .shittymarquee2 {
+      width: 100%;
+      height: 305px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .shittymarqueeimages2 {
+      display: flex;
+      animation: scrollLeft 25s linear infinite;
+    }
+
+    .shittymarqueeimages2 img {
+      width: 190px;
+      height: auto;
+      margin-right: 5px;
+      flex-shrink: 0;
+      user-select: none;
+      display: block;
+    }
+
+    @keyframes scrollLeft {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-3895px);
+      }
+    }
+    
+    .MitzWrapper {
+      transform: translateX(clamp(700px, 32vw, 1280px)) translateY(-68px);
+    }
+    
+    .zoomout {
+      transform: translateX(clamp(700px, 32vw, 1280px)) translateY(-400px);
+    }
+    
+    .smallrightup a img.centering {
+     display: block;
+     margin: 3px;
+    }
+    casteliatop {
+      position: fixed;
+      left: 0;
+      top: 0;
+      height: 384px;
+      overflow: hidden;
+      z-index: 10;
+      opacity: 0;
+    }
+    casteliabottom {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      height: 384px;
+      overflow: hidden;
+      z-index: 10;
+      opacity: 0;
+    }
+    body::before {
+      content: "";
+      height: 384px;
+      width: 100vw;
+      position: fixed;
+      top: 0;
+      z-index: 999;
+      background-image: url(images/Casteliatopwidescreen20.gif);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: left;
+      animation: card 3s linear forwards;
+      pointer-events: none;
+    }
+      body::after {
+      content: "";
+      height: 384px;
+      width: 100vw;
+      position: fixed;
+      bottom: 0;
+      z-index: 999;
+      background-image: url(images/Casteliabottomwidescreen20.gif);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: right;
+      animation: card 3s linear forwards;
+      pointer-events: none;
+    }
+    @keyframes card {
+      0% {
+        opacity: 1;
+      }
+      99% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
